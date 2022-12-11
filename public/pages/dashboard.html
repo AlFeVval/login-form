@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script> -->
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <!--  -->
+    <aside class="smallSidebar">
+        <div class="inner--sidebar" 
+        style="height:292.5px; margin-bottom: 0px; margin-right: 0px; max-height: none;">
+            <div class="user" style="margin-bottom: 4px;">
+                <a href="./" class="link--perfil">
+                    <div class="userInfo">
+                        <div class="user">Alan</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <ul class="navigation">
+            <li class="home">
+                <a href="./" class="ss__home" id="linkHome">Inicio</a>
+            </li>
+            <li class="signout">
+                <a href="../index.html" class="signout">Sign out</a>
+            </li>
+        </ul>
+    </aside>
+    <!-- Bloque que ira cambiando -->
+    <div class="db--home" id="home">
+        <div class="header">
+            <h2 class="headerTitle">Applications</h2>
+            <small class="headerSubtitle">These applications are already to use</small>
+        </div>
+        <!-- Selector de aplicaciones -->
+        <div class="block">
+            <hr class="line">
+            <div class="rowBlock">
+                <div class="app1">
+                    <a href="./" class="b__app1" id="linkApp1">
+                        <img class="img1--robot" src="../img/robot-arm.png" alt="">
+                        <small class="app1--desc">Robot arm app</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Inicio de las applicaciones -->
+    <div class="db--app1 db--hidden" id="app1">
+        <div class="header">
+            <h2 class="headerTitle">Robot arm </h2>
+            <small class="headerSubtitle">Linear 6DOF - Forward & reverse kinematics</small>
+        </div>
+        <div class="block">
+            <hr class="line">
+            <!-- Esta parte debe ser modificada -->
+            <!-- <div class="box--fk">
+                <div class="xcontrol--box">
+                    <div class="tag">x</div>
+                    <div class="slider--x">
+                        <input class="in--x" type="range" min="0" max="100" value="50">
+                    </div>
+                    <div class="value--x">100</div>
+                </div>
+                <div class="ycontrol--box">
+                    <div class="tag">y</div>
+                    <div class="slider--y">
+                        <input class="in--y" type="range" min="0" max="100" value="50">
+                    </div>
+                    <div class="value--y">100</div>
+                </div>
+            </div> -->
+        <div class="box--ik">
+            <div class="center">
+                <button id="ip">Initial pose</button>
+                <button id="pp">Pick & Place</button>
+                <!-- <div class="toggle-button"></div> -->
+            </div>
+            <!-- <div class="text">Init Pose</div> -->
+        </div>
+            
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
